@@ -22,6 +22,12 @@ Using Gale-Shapley Algo all pairs formed are made stable.
 To make it more simpler we will consider N students and N universities.
 Given these two sets with this algo we will form stable pairs of Students and their respective Universities.
 
+Steps -
+1. Each student who has not been admitted to any universities yet goes to the university that he/she prefers the most to whom he has not applied for admission yet according to the preference list.
+2. If a student applies for admission to a university in which the seat is not filled then he/she gets admission in that university.
+3. If a student applies for admission to a university in which the seat is already filled, then the university checks its preference order to see which student it prefers more. If the university prefers the new student over its currently enrolled student, then the university drops out it’s old student and enrolls the new student. And the student who was previously admitted  into the university is no more enrolled.
+4. These steps are repeated until all the students are enrolled in any of the universities.
+
 
 
 
