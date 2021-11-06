@@ -47,6 +47,24 @@ If S1 would have preferred U2 more then he/she would have applied for U2 before 
 
 
 
+For example :-
+Suppose there are 3 students and 3 universities.
+Student = {S1,S2,S3}
+Universities = {U1,U2,U3}
+University_Pref = <img width="127" alt="Screenshot 2021-11-06 at 6 05 24 PM" src="https://user-images.githubusercontent.com/93306058/140609870-4f4d59f1-38c2-4d17-98b5-b871a2f138a0.png">
+The preference list for University –
+U1 : S3>S2>S1
+U2 : S1>S3>S2
+U3 : S1>S2>S3
+Student_Pref = ![Uploading Screenshot 2021-11-06 at 6.05.32 PM.png…]()
+The preference list for University –
+S1 : U1>U2>U3
+S2 : U2>U1>U3
+S3 : U3>U1>U2
+
+
+
+
 
 
 
