@@ -34,6 +34,15 @@ At the end of the algorithm, all  students will be admitted to one of the univer
 
 
 
+##Prove all matching pairs are Stable
+Now we will show that all the pairs formed after implementation of this Algorithm will be stable pairs(according to our explanation of stable pairs given above)
+
+Let two matched pairs be (S1,U1) and (S2, U2) obtained on completion of the Algorithm.----------------------------------------------------------------------------------------
+We will show that it's not possible for S1 and U2 to prefer each other more than their currently matched counterpart.
+If S1 would have preferred U2 more then he/she would have applied for U2 before than it 
+
+
+
 
 
 
