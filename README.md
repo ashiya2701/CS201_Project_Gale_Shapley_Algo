@@ -28,6 +28,9 @@ Steps -
 3. If a student applies for admission to a university in which the seat is already filled, then the university checks its preference order to see which student it prefers more. If the university prefers the new student over its currently enrolled student, then the university drops out it’s old student and enrolls the new student. And the student who was previously admitted  into the university is no more enrolled.
 4. These steps are repeated until all the students are enrolled in any of the universities.
 
+Prove that everyone is admitted to one of the university at the end of algorithm
+At the end of the algorithm, all  students will be admitted to one of the universities. This is because each university will eventually be applied for admission by at least one of the students , thus every university will be admitted by some student.
+
 
 
 
