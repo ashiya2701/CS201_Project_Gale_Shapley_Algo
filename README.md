@@ -66,7 +66,7 @@ U3 : S1>S2>S3
 
 Student_Pref = <img width="125" alt="Screenshot 2021-11-06 at 6 05 32 PM" src="https://user-images.githubusercontent.com/93306058/140609971-9378340b-b6ca-490d-974f-02daa8eb5844.png">
 
-The preference list for University –
+The preference list for University :–
 
 S1 : U1>U2>U3
 
