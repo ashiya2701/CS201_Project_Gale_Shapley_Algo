@@ -29,6 +29,10 @@ void gale_shaply_algorithm(int n)
 			Pref[Uni_Pref[i][j]][i]=j;
 		}
 	}
+   for(i=0;i<n;i++){
+	   present[i]=0;
+	   
+   }
     while(1)
     {
         flag=1;
