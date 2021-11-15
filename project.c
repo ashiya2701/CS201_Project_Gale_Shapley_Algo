@@ -66,7 +66,7 @@ void gale_shaply_algorithm(int n)
         }
 
     }
-    printf("Man Woman\n");
+    printf("Student   University\n");
 	for (i=0;i<n;i++) 
     {
 		printf("%d  %d\n",present[i],i+1);
