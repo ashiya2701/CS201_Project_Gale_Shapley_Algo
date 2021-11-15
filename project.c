@@ -3,28 +3,28 @@
 
 void gale_shaply_algorithm(int n)
 {
-    int Stud_Pref[n+1][n+1],Uni_Pref[n+1][n+1];
-    int Pref[n+1][n+1],enrolled[n+1],present[n+1],last_uni[n+1];
+    int Stud_Pref[n][n],Uni_Pref[n][n];
+    int Pref[n][n],enrolled[n],present[n],last_uni[n];
     int flag,i,j,s,u;
     printf("Enter Preference List for Student: \n");
-    for (i=1;i<=n;i++)
+    for (i=0;i<n;i++)
     {
-		for (j=1;j<=n;j++) 
+		for (j=0;j<n;j++) 
         {
 			scanf("%d",&Stud_Pref[i][j]);
 		}
 	}
     printf("Enter Preference List for University: \n");
-    for (i=1;i<=n;i++)
+    for (i=0;i<n;i++)
     {
-		for (j=1;j<=n;j++) 
+		for (j=0;j<n;j++) 
         {
 			scanf("%d",&Uni_Pref[i][j]);
 		}
 	}
-    for (i=1;i<=n;i++) 
+    for (i=0;i<n;i++) 
     {
-		for (j=1;j<=n;j++) 
+		for (j=0;j<n;j++) 
         {
 			Pref[Uni_Pref[i][j]][i]=j;
 		}
@@ -32,7 +32,7 @@ void gale_shaply_algorithm(int n)
     while(1)
     {
         flag=1;
-        for(i=1;i<=n;i++) 
+        for(i=0;i<n;i++) 
         {
 			if(!enrolled[i]) 
             {
@@ -43,7 +43,7 @@ void gale_shaply_algorithm(int n)
 		}
         if(flag==1)
 			break;
-        for(i=1;i<=n;i++)
+        for(i=0;i<n;i++)
         {
             if(!enrolled[i]) 
             {
@@ -67,14 +67,12 @@ void gale_shaply_algorithm(int n)
 
     }
     printf("Man Woman\n");
-	for (i=1;i<=n;i++) 
+	for (i=0;i<n;i++) 
     {
-		printf("%d  %d\n",present[i],i);
+		printf("%d  %d\n",present[i],i+1);
 	}
 
 }
-//men=stu
-//women=uni
 int main()
 {
     int i,j,n;
