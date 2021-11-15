@@ -53,7 +53,7 @@ void gale_shaply_algorithm(int n)
             {
                 s=i;
                 last_uni[s]=last_uni[s] + 1;
-                u=Stud_Pref[u][last_uni[s]];
+                u=Stud_Pref[s][last_uni[s]];
                 if (present[u] == 0)
                 {
                     present[u] = s;
