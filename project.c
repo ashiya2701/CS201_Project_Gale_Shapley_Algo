@@ -82,7 +82,8 @@ void gale_shaply_algorithm(int n)
 
 int main()
 {
-    int i,j,n;
+    int i,j;
+    int n;
     printf("Enter the number of student or university required for matching :");
     scanf("%d",&n);
     gale_shaply_algorithm(n);
