@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void gale_shaply_algorithm(int n)
+void gale_shapley_algorithm(int n)
 {
     int Stud_Pref[n+1][n+1],Uni_Pref[n+1][n+1];
     int Pref[n+1][n+1],enrolled[n+1],present[n+1],last_uni[n+1];
@@ -86,5 +86,5 @@ int main()
     int n;
     printf("Enter the number of student or university required for matching :");
     scanf("%d",&n);
-    gale_shaply_algorithm(n);
+    gale_shapley_algorithm(n);
 }
