@@ -85,6 +85,17 @@ Next user is asked to enter n lines of input each line consisting n spaced integ
 Next user is asked to enter n lines of input each line consisting n spaced integers ranging from 1 to n and all distinct.(This is the nxn matrix for University Prefernce)
 
 Sample input:
+Enter the number of student or university required for matching :4
+Enter Preference List for Student: 
+1 2 3 4
+2 3 4 1
+2 3 1 4
+1 3 4 2
+Enter Preference List for University: 
+1 2 4 3
+2 3 4 1
+4 1 2 3
+2 3 1 4
 
 
 
