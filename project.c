@@ -28,9 +28,9 @@ void gale_shapley_algorithm(int n)
         enrolled[i]=0;
         last_uni[i]=0;
     }
-    for (j=0;j<=n;++j) 
+    for (j=1;j<=n;++j) 
     {
-		for (i=0 ;i<=n;++i) 
+		for (i=1 ;i<=n;++i) 
         {
 			Pref[Uni_Pref[j][i]][j]=i;
 		}
