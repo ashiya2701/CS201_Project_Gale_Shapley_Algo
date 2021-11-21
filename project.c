@@ -19,8 +19,8 @@ void gale_shapley_algorithm(int n)
 		for (j=1;j<=n;j++) 
         {
 			scanf("%d",&Stud_Pref[i][j]);
-		}
 	}
+    }
     printf("Enter Preference List for University: \n");
     //taking a nxn matrix as input	
     for (i=1;i<=n;i++)
@@ -38,9 +38,9 @@ void gale_shapley_algorithm(int n)
         last_uni[i]=0;
     }
     //calculating Pref[][]
-    for (j=1;j<=n;++j) 
+    for (j=0;j<=n;++j) 
     {
-		for (i=1;i<=n;++i) 
+		for (i=0 ;i<=n;++i) 
         {
 			Pref[Uni_Pref[j][i]][j]=i;
 		}
@@ -50,7 +50,7 @@ void gale_shapley_algorithm(int n)
     {
         flag=1;
         for(i=1;i<=n;i++) 
-        {
+        {   //if ith student is not enrolled 
 	    if(!enrolled[i]) 
             {
 		flag = 0;
@@ -58,31 +58,34 @@ void gale_shapley_algorithm(int n)
 	     }
 
 	}
+	//if all students are enrolled then break the loop    
         if(flag==1)
-			break;
+	break;
+	//this loop iterates over each student    
         for(i=1;i<=n;i++)
-        {
+        {    //checking the enrollment status of ith student
             if(!enrolled[i]) 
-            {
-                s=i;
+            {  //if ith student is not enrolled anywhere he applies to a university
+                s=i;//s is current student
                 last_uni[s]++;
-                u=Stud_Pref[s][last_uni[s]];
+                u=Stud_Pref[s][last_uni[s]];// u is the university where student s is going to apply based on his prefernce list
                 if(present[u]==0)
-                {
+                {   //if there is currently no application with university u then student s gets accepted
                     present[u] = s;
-					enrolled[s] = 1;
+		    enrolled[s] = 1;
                 }
-                else 
+                else //else university u checks it's prefernce list and accepts the student whose Pref[][] value is less
                 if (Pref[s][u]<Pref[present[u]][u]) 
                 {
                     enrolled[present[u]] = 0;
-					present[u] = s;
-					enrolled[s] = 1;
+		    present[u] = s;
+		    enrolled[s] = 1;
                 }
             }
         }
 
-    }		
+    }
+	//printing the result after all iterations of the above loop
     printf("Student	 University\n");
 	for (i=1;i<=n;i++) 
     {
