@@ -80,7 +80,10 @@ S2 : U2>U1>U3
 S3 : U3>U1>U2
 
 
-
+Input:
+The user has to firstly input n-the number of students. Then preference matrix of student and preference matrix of university is taken. The matrix is a square matrix of n×n containing n spaced integers in a row.
+Output:
+Stable pairs of Student and university are outputted.
 
 
 
