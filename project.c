@@ -3,9 +3,15 @@
 
 void gale_shapley_algorithm(int n)
 {
-    int Stud_Pref[n+1][n+1],Uni_Pref[n+1][n+1];
-    int Pref[n+1][n+1],enrolled[n+1],present[n+1],last_uni[n+1];
-    int flag,i,j,s,u,x;
+    int Stud_Pref[n+1][n+1];//prefrence matrix of universities given by students(input matrix)
+    int	Uni_Pref[n+1][n+1];//prefrence matrix of students given by universities(input matrix)
+    int Pref[n+1][n+1];// Stores preference between the all pairs of students and universities
+		       // Pref[i][j] tells us about prefernce of ith student by jth university
+		      // lower value means higher priority
+    int	enrolled[n+1];//stores info about students who's enrollment process is completed
+    int	present[n+1];//present[i] is the student who is currently enrolled in ith University 
+    int	last_uni[n+1];
+    int flag,i,j,s,u;
     printf("Enter Preference List for Student: \n");
     for (i=1;i<=n;i++)
     {
@@ -28,9 +34,9 @@ void gale_shapley_algorithm(int n)
         enrolled[i]=0;
         last_uni[i]=0;
     }
-    for (j=1;j<=n;++j) 
+    for (j=0;j<=n;++j) 
     {
-		for (i=1 ;i<=n;++i) 
+		for (i=0 ;i<=n;++i) 
         {
 			Pref[Uni_Pref[j][i]][j]=i;
 		}
@@ -82,7 +88,7 @@ void gale_shapley_algorithm(int n)
 
 int main()
 {
-    int i,j;
+    
     int n;
     printf("Enter the number of student or university required for matching :");
     scanf("%d",&n);
