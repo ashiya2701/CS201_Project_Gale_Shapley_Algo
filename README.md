@@ -80,7 +80,14 @@ S3 : U3>U1>U2
 HOW TO RUN THE CODE:-
 
 Input:
-The user has to firstly input n-the number of students. Then preference matrix of student and preference matrix of university is taken. The matrix is a square matrix of n×n containing n spaced integers in a row.
+In the first line of input user has to give a positive integer n which is the number of students and seats available.
+Next user is asked to enter n lines of input each line consisting n spaced integers ranging from 1 to n and all distinct.(This is the nxn matrix for Student Prefernce)
+Next user is asked to enter n lines of input each line consisting n spaced integers ranging from 1 to n and all distinct.(This is the nxn matrix for University Prefernce)
+
+Sample input:
+
+
+
 
 Output:
 Stable pairs of Student and university are outputted.
