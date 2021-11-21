@@ -10,9 +10,10 @@ void gale_shapley_algorithm(int n)
 		      // lower value means higher priority
     int	enrolled[n+1];//stores info about students who's enrollment process is completed
     int	present[n+1];//present[i] is the student who is currently enrolled in ith University 
-    int	last_uni[n+1];
+    int	last_uni[n+1];//last_uni[i] stores info about the last university student i applied to
     int flag,i,j,s,u;
     printf("Enter Preference List for Student: \n");
+    //taking a nxn matrix as input	
     for (i=1;i<=n;i++)
     {
 		for (j=1;j<=n;j++) 
@@ -21,19 +22,22 @@ void gale_shapley_algorithm(int n)
 		}
 	}
     printf("Enter Preference List for University: \n");
+    //taking a nxn matrix as input	
     for (i=1;i<=n;i++)
     {
 		for (j=1;j<=n;j++) 
         {
 			scanf("%d",&Uni_Pref[i][j]);
 		}
-	}
+    }
+    //initializing arrays to 0	
     for(i=0;i<=n;i++)
     {
         present[i]=0;
         enrolled[i]=0;
         last_uni[i]=0;
     }
+    //calculating Pref[][]
     for (j=0;j<=n;++j) 
     {
 		for (i=0 ;i<=n;++i) 
@@ -41,18 +45,19 @@ void gale_shapley_algorithm(int n)
 			Pref[Uni_Pref[j][i]][j]=i;
 		}
 	}
+   //loop runs until all the pairs are matched i.e. all the students are enrolled	
     while(1)
     {
         flag=1;
         for(i=1;i<=n;i++) 
         {
-			if(!enrolled[i]) 
+	    if(!enrolled[i]) 
             {
-				flag = 0;
-				break;
-			}
+		flag = 0;
+		break;
+	     }
 
-		}
+	}
         if(flag==1)
 			break;
         for(i=1;i<=n;i++)
